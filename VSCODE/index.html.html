@@ -1,9 +1,9 @@
-<!DOCTYPE html>
+﻿<!DOCTYPE html>
 <html lang="pt">
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Parceiro Fixo Oporto AL Store — Fornecimento Garantido para Alta Temporada</title>
+<title>Parceiro Fixo Oporto AL Store â€” Fornecimento Garantido para Alta Temporada</title>
 <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@700;900&family=DM+Sans:wght@300;400;500;600&display=swap" rel="stylesheet">
 <style>
   :root {
@@ -31,7 +31,7 @@
     overflow-x: hidden;
   }
 
-  /* ─── UTILITY ─── */
+  /* â”€â”€â”€ UTILITY â”€â”€â”€ */
   .serif { font-family: 'Playfair Display', serif; }
   .gold { color: var(--gold); }
   .tag {
@@ -52,7 +52,7 @@
     margin: 24px 0;
   }
 
-  /* ─── STICKY URGENCY BAR ─── */
+  /* â”€â”€â”€ STICKY URGENCY BAR â”€â”€â”€ */
   .urgency-bar {
     position: fixed; top: 0; left: 0; right: 0;
     z-index: 999;
@@ -66,7 +66,7 @@
   }
   .urgency-bar span { font-weight: 800; }
 
-  /* ─── NAV ─── */
+  /* â”€â”€â”€ NAV â”€â”€â”€ */
   nav {
     position: fixed; top: 40px; left: 0; right: 0;
     z-index: 998;
@@ -100,7 +100,7 @@
   }
   .nav-cta:hover { background: var(--gold-light); }
 
-  /* ─── HERO ─── */
+  /* â”€â”€â”€ HERO â”€â”€â”€ */
   .hero {
     min-height: 100vh;
     display: flex;
@@ -226,7 +226,7 @@
     text-transform: uppercase;
   }
 
-  /* ─── PAIN SECTION ─── */
+  /* â”€â”€â”€ PAIN SECTION â”€â”€â”€ */
   .pain-section {
     background: var(--dark-2);
     border-top: 1px solid rgba(201,168,76,0.1);
@@ -275,7 +275,7 @@
   }
   .pain-list li .icon { font-size: 1.2rem; flex-shrink: 0; margin-top: 1px; }
 
-  /* ─── OFFER SECTION ─── */
+  /* â”€â”€â”€ OFFER SECTION â”€â”€â”€ */
   .offer-section { background: var(--dark); }
   .offer-section .section {
     text-align: center;
@@ -334,7 +334,7 @@
     font-weight: 300;
   }
 
-  /* ─── HOW IT WORKS ─── */
+  /* â”€â”€â”€ HOW IT WORKS â”€â”€â”€ */
   .how-section { background: var(--dark-2); }
   .how-inner {
     max-width: 1100px; margin: 0 auto; padding: 100px 40px;
@@ -397,7 +397,7 @@
     font-weight: 300;
   }
 
-  /* ─── TRUST ─── */
+  /* â”€â”€â”€ TRUST â”€â”€â”€ */
   .trust-section { background: var(--dark); }
   .trust-inner {
     max-width: 1100px; margin: 0 auto; padding: 100px 40px;
@@ -452,7 +452,7 @@
   }
   .trust-item p { font-size: 0.82rem; color: var(--text-muted); margin: 0; }
 
-  /* ─── TESTIMONIALS ─── */
+  /* â”€â”€â”€ TESTIMONIALS â”€â”€â”€ */
   .testi-section { background: var(--dark-2); padding: 100px 40px; }
   .testi-inner { max-width: 1100px; margin: 0 auto; }
   .testi-header { text-align: center; margin-bottom: 60px; }
@@ -491,7 +491,7 @@
     color: var(--text-muted);
   }
 
-  /* ─── URGENCY SECTION ─── */
+  /* â”€â”€â”€ URGENCY SECTION â”€â”€â”€ */
   .urgency-section {
     background: var(--gold);
     padding: 80px 40px;
@@ -527,7 +527,7 @@
   }
   .btn-dark:hover { background: var(--dark-2); }
 
-  /* ─── CTA / FORM SECTION ─── */
+  /* â”€â”€â”€ CTA / FORM SECTION â”€â”€â”€ */
   .cta-section { background: var(--dark); padding: 100px 40px; }
   .cta-inner {
     max-width: 700px; margin: 0 auto; text-align: center;
@@ -578,11 +578,39 @@
     transition: border-color 0.2s;
     -webkit-appearance: none;
   }
+  .form-row input[aria-invalid="true"],
+  .form-row select[aria-invalid="true"] { border-color: var(--red-alert); }
   .form-row input::placeholder { color: var(--text-muted); }
   .form-row input:focus,
   .form-row select:focus { border-color: var(--gold); }
   .form-row select option { background: var(--dark-2); }
   .form-grid-2 { display: grid; grid-template-columns: 1fr 1fr; gap: 16px; }
+  .form-field-error {
+    display: block;
+    min-height: 1.15em;
+    margin-top: 8px;
+    font-size: 0.75rem;
+    color: var(--red-alert);
+  }
+  .form-status {
+    display: none;
+    margin-bottom: 20px;
+    padding: 14px 16px;
+    border-radius: 3px;
+    font-size: 0.86rem;
+    line-height: 1.5;
+  }
+  .form-status:not(:empty) { display: block; }
+  .form-status[data-fs-success] {
+    background: rgba(45,122,79,0.16);
+    border: 1px solid rgba(45,122,79,0.4);
+    color: #a8e0bb;
+  }
+  .form-status[data-fs-error] {
+    background: rgba(224,82,82,0.12);
+    border: 1px solid rgba(224,82,82,0.3);
+    color: #ffd0d0;
+  }
   .form-submit {
     width: 100%;
     background: var(--gold);
@@ -599,6 +627,7 @@
     transition: background 0.2s, transform 0.15s;
   }
   .form-submit:hover { background: var(--gold-light); transform: translateY(-1px); }
+  .form-submit:disabled { opacity: 0.8; cursor: wait; transform: none; }
   .form-note {
     text-align: center;
     font-size: 0.75rem;
@@ -606,7 +635,7 @@
     margin-top: 16px;
   }
 
-  /* ─── FAQ ─── */
+  /* â”€â”€â”€ FAQ â”€â”€â”€ */
   .faq-section { background: var(--dark-2); padding: 100px 40px; }
   .faq-inner { max-width: 780px; margin: 0 auto; }
   .faq-header { margin-bottom: 56px; }
@@ -652,7 +681,7 @@
   .faq-item.open .faq-a { max-height: 300px; padding-top: 16px; }
   .faq-item.open .faq-toggle { transform: rotate(45deg); }
 
-  /* ─── FOOTER ─── */
+  /* â”€â”€â”€ FOOTER â”€â”€â”€ */
   footer {
     background: var(--dark);
     border-top: 1px solid rgba(201,168,76,0.1);
@@ -668,7 +697,7 @@
   }
   footer p { font-size: 0.78rem; color: var(--text-muted); }
 
-  /* ─── SCROLL REVEAL ─── */
+  /* â”€â”€â”€ SCROLL REVEAL â”€â”€â”€ */
   .reveal {
     opacity: 0;
     transform: translateY(28px);
@@ -679,7 +708,7 @@
     transform: translateY(0);
   }
 
-  /* ─── RESPONSIVE ─── */
+  /* â”€â”€â”€ RESPONSIVE â”€â”€â”€ */
   @media (max-width: 860px) {
     nav { padding: 16px 20px; }
     .hero { padding: 140px 20px 80px; }
@@ -703,25 +732,25 @@
 
 <!-- URGENCY BAR -->
 <div class="urgency-bar">
-  ⚡ <span>Alta Temporada começa em Junho.</span> Vagas de parceria encerram quando atingirmos capacidade máxima de fornecimento.
+  âš¡ <span>Alta Temporada comeÃ§a em Junho.</span> Vagas de parceria encerram quando atingirmos capacidade mÃ¡xima de fornecimento.
 </div>
 
 <!-- NAV -->
 <nav>
   <div class="nav-logo">Oporto <span>AL Store</span></div>
-  <a href="#agendar" class="nav-cta">Agendar Chamada →</a>
+  <a href="#agendar" class="nav-cta">Agendar Chamada â†’</a>
 </nav>
 
-<!-- ─── HERO ─── -->
+<!-- â”€â”€â”€ HERO â”€â”€â”€ -->
 <section>
   <div class="hero">
     <p class="hero-eyebrow">Programa de Parceria Fixo 2025</p>
     <h1>O seu alojamento nunca mais fica <em>sem stock</em> na alta temporada.</h1>
     <p class="hero-sub">
-      A Oporto AL Store assegura o fornecimento de amenities para gestores de alojamento local que querem profissionalismo, preço justo e logística sem falhas — exactamente quando mais precisam.
+      A Oporto AL Store assegura o fornecimento de amenities para gestores de alojamento local que querem profissionalismo, preÃ§o justo e logÃ­stica sem falhas â€” exactamente quando mais precisam.
     </p>
     <div class="hero-cta-group">
-      <a href="#agendar" class="btn-primary">Quero ser Parceiro Fixo →</a>
+      <a href="#agendar" class="btn-primary">Quero ser Parceiro Fixo â†’</a>
       <a href="#como-funciona" class="btn-ghost">Ver como funciona</a>
     </div>
     <div class="hero-proof">
@@ -745,157 +774,157 @@
   </div>
 </section>
 
-<!-- ─── DOR / PROBLEMA ─── -->
+<!-- â”€â”€â”€ DOR / PROBLEMA â”€â”€â”€ -->
 <section class="pain-section">
   <div class="pain-inner">
     <div class="reveal">
       <span class="tag">O Problema</span>
       <div class="divider" style="margin: 20px 0;"></div>
-      <h2>Já ficou sem amenities no meio de uma semana cheia?</h2>
-      <p>Na alta temporada, um dia sem stock é um dia de reviews negativos, hóspedes insatisfeitos e dinheiro perdido. A maioria dos gestores de AL em Portugal ainda opera de forma reactiva — encomenda quando já está em rutura.</p>
-      <p>Isto custa caro. E acontece sempre nas alturas erradas: Verão, Páscoa, Natal.</p>
+      <h2>JÃ¡ ficou sem amenities no meio de uma semana cheia?</h2>
+      <p>Na alta temporada, um dia sem stock Ã© um dia de reviews negativos, hÃ³spedes insatisfeitos e dinheiro perdido. A maioria dos gestores de AL em Portugal ainda opera de forma reactiva â€” encomenda quando jÃ¡ estÃ¡ em rutura.</p>
+      <p>Isto custa caro. E acontece sempre nas alturas erradas: VerÃ£o, PÃ¡scoa, Natal.</p>
     </div>
     <div class="reveal">
       <ul class="pain-list">
         <li>
-          <span class="icon">🚨</span>
-          <span>Stock em rutura no pico de reservas, sem alternativa rápida no mercado local</span>
+          <span class="icon">ðŸš¨</span>
+          <span>Stock em rutura no pico de reservas, sem alternativa rÃ¡pida no mercado local</span>
         </li>
         <li>
-          <span class="icon">💸</span>
-          <span>Compras de urgência a preços inflacionados que destroem a margem do negócio</span>
+          <span class="icon">ðŸ’¸</span>
+          <span>Compras de urgÃªncia a preÃ§os inflacionados que destroem a margem do negÃ³cio</span>
         </li>
         <li>
-          <span class="icon">⏱️</span>
-          <span>Horas perdidas a gerir fornecedores inconsistentes que falham nos momentos críticos</span>
+          <span class="icon">â±ï¸</span>
+          <span>Horas perdidas a gerir fornecedores inconsistentes que falham nos momentos crÃ­ticos</span>
         </li>
         <li>
-          <span class="icon">⭐</span>
-          <span>Reviews de hóspedes afectadas por detalhes que poderiam ser evitados</span>
+          <span class="icon">â­</span>
+          <span>Reviews de hÃ³spedes afectadas por detalhes que poderiam ser evitados</span>
         </li>
         <li>
-          <span class="icon">🔄</span>
-          <span>Sem previsibilidade de custos, impossível planear o negócio com confiança</span>
+          <span class="icon">ðŸ”„</span>
+          <span>Sem previsibilidade de custos, impossÃ­vel planear o negÃ³cio com confianÃ§a</span>
         </li>
       </ul>
     </div>
   </div>
 </section>
 
-<!-- ─── OFERTA ─── -->
+<!-- â”€â”€â”€ OFERTA â”€â”€â”€ -->
 <section class="offer-section">
   <div class="section">
-    <span class="tag">A Solução</span>
+    <span class="tag">A SoluÃ§Ã£o</span>
     <div class="divider" style="margin: 20px auto;"></div>
     <h2 class="reveal">O Programa de <em class="gold">Parceiro Fixo</em> Oporto AL Store</h2>
-    <p class="sub reveal">Um contrato de fornecimento recorrente pensado para gestores sérios que querem foco no negócio, não na logística.</p>
+    <p class="sub reveal">Um contrato de fornecimento recorrente pensado para gestores sÃ©rios que querem foco no negÃ³cio, nÃ£o na logÃ­stica.</p>
     <div class="offer-grid reveal">
       <div class="offer-card">
         <div class="num">01</div>
         <h3>Stock Reservado Para Si</h3>
-        <p>O seu volume de amenities fica reservado com antecedência, mesmo nos meses mais concorridos. Zero competição com outros gestores pelo mesmo produto.</p>
+        <p>O seu volume de amenities fica reservado com antecedÃªncia, mesmo nos meses mais concorridos. Zero competiÃ§Ã£o com outros gestores pelo mesmo produto.</p>
       </div>
       <div class="offer-card">
         <div class="num">02</div>
-        <h3>Preço Fixo de Parceiro</h3>
-        <p>Condições especiais negociadas no contrato. Sem oscilações de preço, sem surpresas. Sabe exactamente quanto vai gastar antes de cada temporada começar.</p>
+        <h3>PreÃ§o Fixo de Parceiro</h3>
+        <p>CondiÃ§Ãµes especiais negociadas no contrato. Sem oscilaÃ§Ãµes de preÃ§o, sem surpresas. Sabe exactamente quanto vai gastar antes de cada temporada comeÃ§ar.</p>
       </div>
       <div class="offer-card">
         <div class="num">03</div>
         <h3>Entrega Programada</h3>
-        <p>Definimos juntos o calendário de entregas para a época alta. Recebe exactamente o que precisa, quando precisa, sem ter de fazer uma única encomenda manual.</p>
+        <p>Definimos juntos o calendÃ¡rio de entregas para a Ã©poca alta. Recebe exactamente o que precisa, quando precisa, sem ter de fazer uma Ãºnica encomenda manual.</p>
       </div>
       <div class="offer-card">
         <div class="num">04</div>
         <h3>Gestor de Conta Dedicado</h3>
-        <p>Um ponto de contacto directo para qualquer ajuste, urgência ou questão. Não é um call-center — é uma relação de parceria real.</p>
+        <p>Um ponto de contacto directo para qualquer ajuste, urgÃªncia ou questÃ£o. NÃ£o Ã© um call-center â€” Ã© uma relaÃ§Ã£o de parceria real.</p>
       </div>
       <div class="offer-card">
         <div class="num">05</div>
         <h3>Produtos Certificados</h3>
-        <p>Catálogo curado de amenities de qualidade, compatível com as expectativas dos hóspedes internacionais e com as normas do mercado de AL premium.</p>
+        <p>CatÃ¡logo curado de amenities de qualidade, compatÃ­vel com as expectativas dos hÃ³spedes internacionais e com as normas do mercado de AL premium.</p>
       </div>
       <div class="offer-card">
         <div class="num">06</div>
-        <h3>Logística Fiável no Porto</h3>
-        <p>Operação sediada no Porto com distribuição testada em Portugal continental. Entrega em 48h, com rastreio e responsabilidade de ponta a ponta.</p>
+        <h3>LogÃ­stica FiÃ¡vel no Porto</h3>
+        <p>OperaÃ§Ã£o sediada no Porto com distribuiÃ§Ã£o testada em Portugal continental. Entrega em 48h, com rastreio e responsabilidade de ponta a ponta.</p>
       </div>
     </div>
   </div>
 </section>
 
-<!-- ─── COMO FUNCIONA ─── -->
+<!-- â”€â”€â”€ COMO FUNCIONA â”€â”€â”€ -->
 <section class="how-section" id="como-funciona">
   <div class="how-inner">
     <div class="how-header reveal">
       <span class="tag">Processo</span>
       <div class="divider" style="margin: 20px auto;"></div>
       <h2>Como se torna Parceiro Fixo</h2>
-      <p>Simples, rápido e sem burocracia desnecessária. Do contacto ao primeiro fornecimento em menos de uma semana.</p>
+      <p>Simples, rÃ¡pido e sem burocracia desnecessÃ¡ria. Do contacto ao primeiro fornecimento em menos de uma semana.</p>
     </div>
     <div class="steps reveal">
       <div class="step">
         <div class="step-num">Passo 01</div>
         <h3>Chamada de 20 min</h3>
-        <p>Fala connosco sobre o seu volume, propriedades e necessidades específicas da época alta.</p>
+        <p>Fala connosco sobre o seu volume, propriedades e necessidades especÃ­ficas da Ã©poca alta.</p>
       </div>
       <div class="step">
         <div class="step-num">Passo 02</div>
         <h3>Proposta Personalizada</h3>
-        <p>Elaboramos uma proposta com produtos, volumes, calendário e condições comerciais à sua medida.</p>
+        <p>Elaboramos uma proposta com produtos, volumes, calendÃ¡rio e condiÃ§Ãµes comerciais Ã  sua medida.</p>
       </div>
       <div class="step">
         <div class="step-num">Passo 03</div>
-        <h3>Formalização do Contrato</h3>
-        <p>Processo simples, em português, com total transparência nos termos e sem letra pequena.</p>
+        <h3>FormalizaÃ§Ã£o do Contrato</h3>
+        <p>Processo simples, em portuguÃªs, com total transparÃªncia nos termos e sem letra pequena.</p>
       </div>
       <div class="step">
         <div class="step-num">Passo 04</div>
         <h3>Fornecimento Garantido</h3>
-        <p>A partir desse momento, a logística é nossa. Foque-se nos seus hóspedes, nós tratamos do resto.</p>
+        <p>A partir desse momento, a logÃ­stica Ã© nossa. Foque-se nos seus hÃ³spedes, nÃ³s tratamos do resto.</p>
       </div>
     </div>
   </div>
 </section>
 
-<!-- ─── CONFIANÇA ─── -->
+<!-- â”€â”€â”€ CONFIANÃ‡A â”€â”€â”€ -->
 <section class="trust-section">
   <div class="trust-inner">
     <div class="trust-grid">
       <div class="reveal">
         <span class="tag">Porque a Oporto</span>
         <div class="divider"></div>
-        <h2>Não somos um fornecedor. Somos um parceiro de negócio.</h2>
-        <p>A Oporto AL Store nasceu dentro do mercado de alojamento local. Sabemos exactamente o que os gestores precisam porque já vivemos os mesmos desafios.</p>
-        <p>Trabalhamos com clientes nacionais e internacionais, e construímos a nossa reputação uma entrega de cada vez.</p>
+        <h2>NÃ£o somos um fornecedor. Somos um parceiro de negÃ³cio.</h2>
+        <p>A Oporto AL Store nasceu dentro do mercado de alojamento local. Sabemos exactamente o que os gestores precisam porque jÃ¡ vivemos os mesmos desafios.</p>
+        <p>Trabalhamos com clientes nacionais e internacionais, e construÃ­mos a nossa reputaÃ§Ã£o uma entrega de cada vez.</p>
       </div>
       <div class="trust-items reveal">
         <div class="trust-item">
-          <div class="ico">📍</div>
+          <div class="ico">ðŸ“</div>
           <div>
             <h4>Sediados no Porto</h4>
-            <p>Operação local com conhecimento profundo do mercado de AL português e europeu.</p>
+            <p>OperaÃ§Ã£o local com conhecimento profundo do mercado de AL portuguÃªs e europeu.</p>
           </div>
         </div>
         <div class="trust-item">
-          <div class="ico">🌍</div>
+          <div class="ico">ðŸŒ</div>
           <div>
             <h4>Clientes Internacionais</h4>
-            <p>Fornecemos a gestores com portfólios internacionais que exigem consistência e qualidade sem margem para erro.</p>
+            <p>Fornecemos a gestores com portfÃ³lios internacionais que exigem consistÃªncia e qualidade sem margem para erro.</p>
           </div>
         </div>
         <div class="trust-item">
-          <div class="ico">📦</div>
+          <div class="ico">ðŸ“¦</div>
           <div>
-            <h4>Logística Própria e Testada</h4>
-            <p>Não dependemos de terceiros para o essencial. A nossa cadeia de fornecimento é controlada de ponta a ponta.</p>
+            <h4>LogÃ­stica PrÃ³pria e Testada</h4>
+            <p>NÃ£o dependemos de terceiros para o essencial. A nossa cadeia de fornecimento Ã© controlada de ponta a ponta.</p>
           </div>
         </div>
         <div class="trust-item">
-          <div class="ico">💬</div>
+          <div class="ico">ðŸ’¬</div>
           <div>
-            <h4>Comunicação Real</h4>
-            <p>Respondemos. Sempre. Sem tickets, sem bots, sem filas de espera quando mais precisa de nós.</p>
+            <h4>ComunicaÃ§Ã£o Real</h4>
+            <p>Respondemos. Sempre. Sem tickets, sem bots, sem filas de espera quando mais precisa de nÃ³s.</p>
           </div>
         </div>
       </div>
@@ -903,7 +932,7 @@
   </div>
 </section>
 
-<!-- ─── TESTEMUNHOS ─── -->
+<!-- â”€â”€â”€ TESTEMUNHOS â”€â”€â”€ -->
 <section class="testi-section">
   <div class="testi-inner">
     <div class="testi-header reveal">
@@ -913,24 +942,24 @@
     </div>
     <div class="testi-grid reveal">
       <div class="testi-card">
-        <div class="testi-stars">★★★★★</div>
-        <p class="testi-quote">"Desde que fechei o contrato com a Oporto, nunca mais tive uma semana de alta temporada com ruptura de stock. É uma tranquilidade que vale mais do que qualquer desconto pontual."</p>
+        <div class="testi-stars">â˜…â˜…â˜…â˜…â˜…</div>
+        <p class="testi-quote">"Desde que fechei o contrato com a Oporto, nunca mais tive uma semana de alta temporada com ruptura de stock. Ã‰ uma tranquilidade que vale mais do que qualquer desconto pontual."</p>
         <div class="testi-author">
           <strong>Mariana F.</strong>
           <span>Gestora de 8 propriedades, Porto</span>
         </div>
       </div>
       <div class="testi-card">
-        <div class="testi-stars">★★★★★</div>
-        <p class="testi-quote">"A relação preço-qualidade é muito boa, mas o que me fez renovar o contrato foi mesmo a fiabilidade. Chega sempre a tempo, nas quantidades certas."</p>
+        <div class="testi-stars">â˜…â˜…â˜…â˜…â˜…</div>
+        <p class="testi-quote">"A relaÃ§Ã£o preÃ§o-qualidade Ã© muito boa, mas o que me fez renovar o contrato foi mesmo a fiabilidade. Chega sempre a tempo, nas quantidades certas."</p>
         <div class="testi-author">
           <strong>Ricardo A.</strong>
           <span>Property Manager, Lisboa & Porto</span>
         </div>
       </div>
       <div class="testi-card">
-        <div class="testi-stars">★★★★★</div>
-        <p class="testi-quote">"Giro um portfólio de propriedades para clientes internacionais. A Oporto AL Store foi o único fornecedor que cumpriu sistematicamente o que prometeu. Recomendo sem reservas."</p>
+        <div class="testi-stars">â˜…â˜…â˜…â˜…â˜…</div>
+        <p class="testi-quote">"Giro um portfÃ³lio de propriedades para clientes internacionais. A Oporto AL Store foi o Ãºnico fornecedor que cumpriu sistematicamente o que prometeu. Recomendo sem reservas."</p>
         <div class="testi-author">
           <strong>Sophie L.</strong>
           <span>Gestora Internacional, Porto</span>
@@ -940,75 +969,83 @@
   </div>
 </section>
 
-<!-- ─── URGÊNCIA ─── -->
+<!-- â”€â”€â”€ URGÃŠNCIA â”€â”€â”€ -->
 <section class="urgency-section">
   <div class="reveal">
-    <h2>A Alta Temporada começa em Junho.<br>As vagas estão a fechar.</h2>
-    <p>Temos capacidade limitada de parceiros fixos por temporada. Quando atingirmos o volume máximo de fornecimento, encerramos novas parcerias até ao próximo ciclo.</p>
-    <a href="#agendar" class="btn-dark">Garantir a Minha Vaga Agora →</a>
+    <h2>A Alta Temporada comeÃ§a em Junho.<br>As vagas estÃ£o a fechar.</h2>
+    <p>Temos capacidade limitada de parceiros fixos por temporada. Quando atingirmos o volume mÃ¡ximo de fornecimento, encerramos novas parcerias atÃ© ao prÃ³ximo ciclo.</p>
+    <a href="#agendar" class="btn-dark">Garantir a Minha Vaga Agora â†’</a>
   </div>
 </section>
 
-<!-- ─── FORMULÁRIO / CTA ─── -->
+<!-- â”€â”€â”€ FORMULÃRIO / CTA â”€â”€â”€ -->
 <section class="cta-section" id="agendar">
   <div class="cta-inner">
     <span class="tag">Agendar Chamada</span>
     <div class="divider" style="margin: 20px auto;"></div>
     <h2 class="reveal">Fale connosco em 20 minutos. Sem compromisso.</h2>
-    <p class="reveal">Preencha o formulário abaixo e a nossa equipa comercial entra em contacto em menos de 24 horas para agendar a sua chamada de diagnóstico gratuita.</p>
+    <p class="reveal">Preencha o formulÃ¡rio abaixo e a nossa equipa comercial entra em contacto em menos de 24 horas para agendar a sua chamada de diagnÃ³stico gratuita.</p>
 
-    <div class="lead-form reveal">
+    <form id="lead-form" class="lead-form reveal" action="https://formspree.io/f/xvzdyppn" method="POST">
+      <input type="hidden" name="_subject" value="Novo pedido de chamada - Oporto AL Store">
+      <input type="hidden" name="origem" value="Landing page Parceiro Fixo">
+      <div class="form-status" data-fs-success></div>
+      <div class="form-status" data-fs-error></div>
       <div class="form-grid-2">
         <div class="form-row">
-          <label>Nome</label>
-          <input type="text" placeholder="O seu nome completo">
+          <label for="lead-name">Nome</label>
+          <input id="lead-name" type="text" name="name" placeholder="O seu nome completo" autocomplete="name" required data-fs-field>
+          <span class="form-field-error" data-fs-error="name"></span>
         </div>
         <div class="form-row">
-          <label>Empresa / Nome do Negócio</label>
-          <input type="text" placeholder="Ex: Casa do Rio Alojamento">
+          <label for="lead-business">Empresa / Nome do Negocio</label>
+          <input id="lead-business" type="text" name="business_name" placeholder="Ex: Casa do Rio Alojamento" autocomplete="organization" data-fs-field>
+          <span class="form-field-error" data-fs-error="business_name"></span>
         </div>
       </div>
       <div class="form-grid-2">
         <div class="form-row">
-          <label>Email</label>
-          <input type="email" placeholder="gestor@exemplo.pt">
+          <label for="lead-email">Email</label>
+          <input id="lead-email" type="email" name="email" placeholder="gestor@exemplo.pt" autocomplete="email" required data-fs-field>
+          <span class="form-field-error" data-fs-error="email"></span>
         </div>
         <div class="form-row">
-          <label>Telemóvel</label>
-          <input type="tel" placeholder="+351 9XX XXX XXX">
+          <label for="lead-phone">Telemovel</label>
+          <input id="lead-phone" type="tel" name="phone" placeholder="+351 9XX XXX XXX" autocomplete="tel" data-fs-field>
+          <span class="form-field-error" data-fs-error="phone"></span>
         </div>
       </div>
       <div class="form-grid-2">
         <div class="form-row">
-          <label>Nº de Propriedades que Gere</label>
-          <select>
-            <option value="" disabled selected>Seleccionar</option>
-            <option>1 a 3 propriedades</option>
-            <option>4 a 10 propriedades</option>
-            <option>11 a 25 propriedades</option>
-            <option>Mais de 25 propriedades</option>
+          <label for="lead-properties">N. de Propriedades que Gere</label>
+          <select id="lead-properties" name="property_count" required data-fs-field>
+            <option value="" disabled selected>Selecionar</option>
+            <option value="1 a 3 propriedades">1 a 3 propriedades</option>
+            <option value="4 a 10 propriedades">4 a 10 propriedades</option>
+            <option value="11 a 25 propriedades">11 a 25 propriedades</option>
+            <option value="Mais de 25 propriedades">Mais de 25 propriedades</option>
           </select>
+          <span class="form-field-error" data-fs-error="property_count"></span>
         </div>
         <div class="form-row">
-          <label>Zona de Operação</label>
-          <select>
-            <option value="" disabled selected>Seleccionar</option>
-            <option>Porto e Grande Porto</option>
-            <option>Lisboa e Grande Lisboa</option>
-            <option>Algarve</option>
-            <option>Outra zona de Portugal</option>
+          <label for="lead-area">Zona de Operacao</label>
+          <select id="lead-area" name="operating_area" required data-fs-field>
+            <option value="" disabled selected>Selecionar</option>
+            <option value="Porto e Grande Porto">Porto e Grande Porto</option>
+            <option value="Lisboa e Grande Lisboa">Lisboa e Grande Lisboa</option>
+            <option value="Algarve">Algarve</option>
+            <option value="Outra zona de Portugal">Outra zona de Portugal</option>
           </select>
+          <span class="form-field-error" data-fs-error="operating_area"></span>
         </div>
       </div>
-      <button class="form-submit" onclick="handleSubmit(this)">
-        Quero Agendar a Minha Chamada Gratuita →
-      </button>
-      <p class="form-note">🔒 Os seus dados são confidenciais e nunca partilhados com terceiros. Sem spam, apenas a chamada que pediu.</p>
-    </div>
+      <button class="form-submit" type="submit" data-fs-submit-btn>Quero Agendar a Minha Chamada Gratuita -&gt;</button>
+      <p class="form-note">Os seus dados sao confidenciais e nunca partilhados com terceiros. Sem spam, apenas a chamada que pediu.</p>
+    </form>
   </div>
 </section>
 
-<!-- ─── FAQ ─── -->
+<!-- â”€â”€â”€ FAQ â”€â”€â”€ -->
 <section class="faq-section">
   <div class="faq-inner">
     <div class="faq-header reveal">
@@ -1019,10 +1056,10 @@
 
     <div class="faq-item reveal" onclick="toggleFaq(this)">
       <div class="faq-q">
-        <h4>Qual é o volume mínimo para ter acesso ao contrato de parceiro fixo?</h4>
+        <h4>Qual Ã© o volume mÃ­nimo para ter acesso ao contrato de parceiro fixo?</h4>
         <span class="faq-toggle">+</span>
       </div>
-      <div class="faq-a">Definimos volumes mínimos de acordo com o número de propriedades e épocas de operação. Na chamada de diagnóstico, encontramos a solução que faz sentido para o seu negócio — seja uma propriedade ou um portfólio alargado.</div>
+      <div class="faq-a">Definimos volumes mÃ­nimos de acordo com o nÃºmero de propriedades e Ã©pocas de operaÃ§Ã£o. Na chamada de diagnÃ³stico, encontramos a soluÃ§Ã£o que faz sentido para o seu negÃ³cio â€” seja uma propriedade ou um portfÃ³lio alargado.</div>
     </div>
 
     <div class="faq-item reveal" onclick="toggleFaq(this)">
@@ -1030,20 +1067,20 @@
         <h4>Tenho flexibilidade para ajustar as quantidades ao longo da temporada?</h4>
         <span class="faq-toggle">+</span>
       </div>
-      <div class="faq-a">Sim. O contrato prevê janelas de ajuste para acomodar variações de ocupação. Não é um contrato rígido — é uma parceria real, e sabemos que o mercado de AL tem imprevistos.</div>
+      <div class="faq-a">Sim. O contrato prevÃª janelas de ajuste para acomodar variaÃ§Ãµes de ocupaÃ§Ã£o. NÃ£o Ã© um contrato rÃ­gido â€” Ã© uma parceria real, e sabemos que o mercado de AL tem imprevistos.</div>
     </div>
 
     <div class="faq-item reveal" onclick="toggleFaq(this)">
       <div class="faq-q">
-        <h4>Que produtos estão incluídos no programa de parceiro?</h4>
+        <h4>Que produtos estÃ£o incluÃ­dos no programa de parceiro?</h4>
         <span class="faq-toggle">+</span>
       </div>
-      <div class="faq-a">Todo o nosso catálogo de amenities para alojamento local: champô, gel de banho, condicionador, sabonete, kit dental, kit de barbear, e outros consumíveis de quarto. A proposta é personalizada com base nos produtos que já usa ou quer experimentar.</div>
+      <div class="faq-a">Todo o nosso catÃ¡logo de amenities para alojamento local: champÃ´, gel de banho, condicionador, sabonete, kit dental, kit de barbear, e outros consumÃ­veis de quarto. A proposta Ã© personalizada com base nos produtos que jÃ¡ usa ou quer experimentar.</div>
     </div>
 
     <div class="faq-item reveal" onclick="toggleFaq(this)">
       <div class="faq-q">
-        <h4>A entrega é feita nas minhas propriedades ou tenho de levantar?</h4>
+        <h4>A entrega Ã© feita nas minhas propriedades ou tenho de levantar?</h4>
         <span class="faq-toggle">+</span>
       </div>
       <div class="faq-a">Entregamos. Definimos na chamada os pontos de entrega mais convenientes para si, com flexibilidade para centralizar numa morada ou distribuir por propriedades.</div>
@@ -1054,16 +1091,16 @@
         <h4>Trabalham apenas com gestores no Porto?</h4>
         <span class="faq-toggle">+</span>
       </div>
-      <div class="faq-a">Não. Estamos sediados no Porto, mas fornecemos em Portugal continental. Contacte-nos mesmo que esteja fora da área do Porto — avaliamos a logística caso a caso.</div>
+      <div class="faq-a">NÃ£o. Estamos sediados no Porto, mas fornecemos em Portugal continental. Contacte-nos mesmo que esteja fora da Ã¡rea do Porto â€” avaliamos a logÃ­stica caso a caso.</div>
     </div>
   </div>
 </section>
 
-<!-- ─── FOOTER ─── -->
+<!-- â”€â”€â”€ FOOTER â”€â”€â”€ -->
 <footer>
   <div class="logo">Oporto AL Store</div>
-  <p>Fornecedor especializado em amenities para Alojamento Local · Porto, Portugal</p>
-  <p style="margin-top:8px;">© 2025 Oporto AL Store · Todos os direitos reservados</p>
+  <p>Fornecedor especializado em amenities para Alojamento Local Â· Porto, Portugal</p>
+  <p style="margin-top:8px;">Â© 2025 Oporto AL Store Â· Todos os direitos reservados</p>
 </footer>
 
 <script>
@@ -1081,13 +1118,9 @@
     if (!isOpen) el.classList.add('open');
   }
 
-  // Form submit
-  function handleSubmit(btn) {
-    btn.textContent = '✓ Pedido enviado! Entraremos em contacto em breve.';
-    btn.style.background = '#2d7a4f';
-    btn.style.color = '#fff';
-    btn.disabled = true;
-  }
+  // Formspree
+  window.formspree = window.formspree || function () { (formspree.q = formspree.q || []).push(arguments); };
+  formspree('initForm', { formElement: '#lead-form', formId: 'xvzdyppn' });
 
   // Stagger reveal on hero stats
   document.querySelectorAll('.hero-proof-item').forEach((el, i) => {
@@ -1098,5 +1131,8 @@
     setTimeout(() => { el.style.opacity = '1'; el.style.transform = 'none'; }, 800 + i * 120);
   });
 </script>
+<script src="https://unpkg.com/@formspree/ajax@1" defer></script>
 </body>
 </html>
+
+
